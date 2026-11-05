@@ -1,2 +1,78 @@
-# Auto detect text files and perform LF normalization
+# ═══════════════════════════════════════════════════════════════════
+#  AutoUSB Toolkit │ .gitattributes
+# ═══════════════════════════════════════════════════════════════════
+
+# ── Auto-Detect & Normalize ──────────────────────────────────────
 * text=auto
+
+# ── Source Code ──────────────────────────────────────────────────
+*.cs        text diff=csharp
+*.xaml      text
+*.xml       text
+*.json      text
+*.yaml      text
+*.yml       text
+*.manifest  text
+*.config    text
+*.csproj    text
+*.sln       text eol=crlf
+
+# ── Documentation ────────────────────────────────────────────────
+*.md        text diff=markdown
+*.txt       text
+*.csv       text
+LICENSE     text
+
+# ── Scripts ──────────────────────────────────────────────────────
+*.bat       text eol=crlf
+*.cmd       text eol=crlf
+*.ps1       text eol=crlf
+*.sh        text eol=lf
+
+# ── Web / Config ─────────────────────────────────────────────────
+*.html      text diff=html
+*.css       text diff=css
+*.js        text
+
+# ── Binary Files (no diff, no merge, no text conversion) ─────────
+*.exe       binary
+*.dll       binary
+*.pdb       binary
+*.ico       binary
+*.png       binary
+*.jpg       binary
+*.jpeg      binary
+*.gif       binary
+*.bmp       binary
+*.tiff      binary
+*.tif       binary
+*.webp      binary
+*.mp3       binary
+*.wav       binary
+*.flac      binary
+*.wma       binary
+*.aac       binary
+*.ogg       binary
+*.mp4       binary
+*.avi       binary
+*.zip       binary
+*.7z        binary
+*.tar       binary
+*.gz        binary
+*.rar       binary
+
+# ── SVG (text-based image) ───────────────────────────────────────
+*.svg       text
+
+# ── GitHub Linguist Overrides ────────────────────────────────────
+*.cs        linguist-language=C#
+*.bat       linguist-detectable=false
+*.ps1       linguist-detectable=false
+*.manifest  linguist-detectable=false
+*.csproj    linguist-detectable=false
+
+# ── Export Ignore (excluded from `git archive`) ──────────────────
+.gitattributes  export-ignore
+.gitignore      export-ignore
+.github/        export-ignore
+scratch/        export-ignore

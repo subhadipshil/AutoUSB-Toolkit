@@ -1,0 +1,93 @@
+# ═══════════════════════════════════════════════════════════════════
+#  AutoUSB Toolkit │ .gitignore
+# ═══════════════════════════════════════════════════════════════════
+
+# ── Build Output & Intermediate ──────────────────────────────────
+bin/*
+!bin/AutoUSB-Toolkit.exe
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+build/
+obj/
+*.obj
+*.pdb
+*.ilk
+*.aps
+*.idb
+*.pch
+*.lib
+*.exp
+
+# ── NuGet / Package Restore ──────────────────────────────────────
+packages/
+*.nupkg
+.nuget/
+project.lock.json
+project.fragment.lock.json
+
+# ── Temporary & Scratch Files ────────────────────────────────────
+make_icon.cs
+make_icon.exe
+test_*.cs
+test_*.exe
+scratch/
+*.log
+*.tmp
+*.temp
+*.bak
+*.orig
+*.nlp
+*.cache
+
+# ── Visual Studio & IDEs ─────────────────────────────────────────
+.vs/
+*.user
+*.userosscache
+*.suo
+*.sln.docstates
+*.userprefs
+*.dbmdl
+*.jsproj.user
+*.pidb
+*.booproj.user
+launchSettings.json
+
+# JetBrains Rider / IntelliJ
+.idea/
+
+# VS Code
+.vscode/
+
+# Vim / Emacs
+*.swp
+*.swo
+*.*~
+*~
+\#*\#
+
+# ── OS-Generated Junk ────────────────────────────────────────────
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+desktop.ini
+$RECYCLE.BIN/
+*.stackdump
+[Dd]esktop.ini
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+.fseventsd
+Icon?
+
+# Linux
+.directory
+.Trash-*

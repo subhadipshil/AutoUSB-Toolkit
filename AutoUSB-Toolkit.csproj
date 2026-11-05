@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A8C16789-3F1E-4890-B88D-4C91E5A0B123}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AutoUSBToolkit</RootNamespace>
+    <AssemblyName>AutoUSB-Toolkit</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <ApplicationManifest>App.manifest</ApplicationManifest>
+    <ApplicationIcon>icons\app.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System"><Private>False</Private></Reference>
+    <Reference Include="System.Core"><Private>False</Private></Reference>
+    <Reference Include="System.Data"><Private>False</Private></Reference>
+    <Reference Include="System.Drawing"><Private>False</Private></Reference>
+    <Reference Include="System.Windows.Forms"><Private>False</Private></Reference>
+    <Reference Include="System.Xml"><Private>False</Private></Reference>
+    <Reference Include="System.Xaml"><Private>False</Private></Reference>
+    <Reference Include="WindowsBase"><Private>False</Private></Reference>
+    <Reference Include="PresentationCore"><Private>False</Private></Reference>
+    <Reference Include="PresentationFramework"><Private>False</Private></Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="src\Program.cs" />
+    <Compile Include="src\Models\UsbDriveInfo.cs" />
+    <Compile Include="src\Models\CarProfile.cs" />
+    <Compile Include="src\Models\AuditResult.cs" />
+    <Compile Include="src\Models\FormatOptions.cs" />
+    <Compile Include="src\Core\Logger.cs" />
+    <Compile Include="src\Core\CarDatabase.cs" />
+    <Compile Include="src\Core\DriveDetector.cs" />
+    <Compile Include="src\Core\Fat32Engine.cs" />
+    <Compile Include="src\Core\DiskFormatter.cs" />
+    <Compile Include="src\Core\DriveDoctor.cs" />
+    <Compile Include="src\Core\FatSorter.cs" />
+    <Compile Include="src\Core\AudioOptimizer.cs" />
+    <Compile Include="src\Core\MediaSyncEngine.cs" />
+    <Compile Include="src\UI\Theme.cs" />
+    <Compile Include="src\UI\MainWindow.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="icons\app.png">
+      <LogicalName>AutoUSBToolkit.icons.app.png</LogicalName>
+    </EmbeddedResource>
+    <Content Include="icons\app.ico" />
+    <None Include="App.manifest" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
