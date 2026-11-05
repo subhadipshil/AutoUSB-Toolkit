@@ -59,7 +59,7 @@ namespace AutoUSBToolkit.Core
             {
                 handler(null, args);
             }
-        }
+        } 
 
         public static void Info(string message) { Log(LogLevel.Info, message); }
         public static void Success(string message) { Log(LogLevel.Success, message); }

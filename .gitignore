@@ -86,7 +86,7 @@ $RECYCLE.BIN/
 .Spotlight-V100
 .Trashes
 .fseventsd
-Icon?
+Icon[^s]
 
 # Linux
 .directory
